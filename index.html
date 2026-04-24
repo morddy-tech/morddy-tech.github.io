@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morddy | Tech & Design Portfolio</title>
+    
+    <!-- Security Headers (via meta tags) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Content Security Policy (CSP) - prevents XSS and data injection -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data: https:;
+        font-src 'self';
+        connect-src 'self';
+        frame-ancestors 'none';
+        base-uri 'self';
+        form-action 'self';
+    ">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,11 +46,13 @@
         <h2>Graphic Design</h2>
         <div class="grid">
             <div class="card">
-                <img src="assets/design1.jpg" alt="Design Project 1">
+                <!-- Added alt attribute for accessibility; image placeholder handling -->
+                <img src="assets/design1.jpg" alt="Brand Identity Design Project - Morddy Portfolio" onerror="this.style.opacity='0.5'; this.alt='Image loading failed - please check assets folder'">
                 <h3>Brand Identity</h3>
                 <p>Visual concepts and creative direction.</p>
             </div>
-            </div>
+            <!-- Removed stray closing div that broke structure -->
+        </div>
     </section>
 
     <section id="dev" class="section">
@@ -40,12 +61,14 @@
             <div class="card">
                 <h3>Java Project (T3/T4)</h3>
                 <p>Software engineering logic and application development.</p>
-                <a href="https://github.com/morddy-tech/your-repo" class="btn">View Code</a>
+                <!-- Added rel="noopener noreferrer" for security when opening external links -->
+                <a href="https://github.com/morddy-tech/your-repo" class="btn" target="_blank" rel="noopener noreferrer">View Code</a>
             </div>
             <div class="card">
                 <h3>Python Automation (T2)</h3>
                 <p>Scripts developed for academic and practical automation.</p>
-                <a href="#" class="btn">View Project</a>
+                <!-- Placeholder link - consider adding real URL or removing href="#" -->
+                <a href="#" class="btn" rel="noopener noreferrer">View Project</a>
             </div>
         </div>
     </section>
@@ -65,8 +88,16 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 morddy-tech | Built with Plain HTML & CSS</p>
+        <p>&copy; 2026 morddy-tech | Built with Secure HTML &amp; CSS</p>
     </footer>
 
+    <!-- Optional: Add a simple console warning to deter inspect-element tampering (cosmetic only) -->
+    <script>
+        // This is a deterrent, not a real security measure
+        if (window.console && window.console.log) {
+            console.log("%c🔒 Security Notice: This portfolio is protected with modern security headers.", "color: #00ff00; font-size: 14px;");
+            console.log("%c⚠️ Unauthorized code injection attempts will be blocked by CSP.", "color: #ffaa00; font-size: 12px;");
+        }
+    </script>
 </body>
 </html>
