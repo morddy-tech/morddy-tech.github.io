@@ -5,99 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morddy | Tech & Design Portfolio</title>
     
-    <!-- Security Headers (via meta tags) -->
+    <!-- Security & SEO Meta Tags -->
+    <meta name="description" content="Morddy – Cybersecurity, Full-Stack Development & Graphic Design Portfolio">
+    <meta name="robots" content="index, follow">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
-    <!-- Content Security Policy (CSP) - prevents XSS and data injection -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
-        style-src 'self' 'unsafe-inline';
-        img-src 'self' data: https:;
-        font-src 'self';
-        connect-src 'self';
-        frame-ancestors 'none';
-        base-uri 'self';
-        form-action 'self';
-    ">
+    <!-- Content Security Policy (CSP) – allows fetch from same origin -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
     
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
 </head>
 <body>
 
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <div class="logo">MORDDY_TECH</div>
-            <ul>
-                <li><a href="#design">Design</a></li>
-                <li><a href="#dev">Development</a></li>
-                <li><a href="#security">Cybersecurity</a></li>
+            <ul class="nav-links">
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#skills">Specialties</a></li>
+                <li><a href="#degree">Education</a></li>
+                <li><a href="#hardware">Hardware</a></li>
             </ul>
         </nav>
         <div class="hero">
-            <h1>Designing Secure Digital Experiences</h1>
-            <p>Computer Science Student | Graphic Designer | Cybersecurity Practitioner</p>
+            <h1>Ifedayo Mordecai E.M.</h1>
+            <p class="tagline">Building Secure, High-Performance Digital Solutions</p>
+            <div class="badges">
+                <span>CS Student</span> | <span>Cybersecurity</span> | <span>Full-Stack</span> | <span>Graphic Design</span>
+            </div>
         </div>
     </header>
 
-    <section id="design" class="section">
-        <h2>Graphic Design</h2>
-        <div class="grid">
-            <div class="card">
-                <!-- Added alt attribute for accessibility; image placeholder handling -->
-                <img src="assets/design1.jpg" alt="Brand Identity Design Project - Morddy Portfolio" onerror="this.style.opacity='0.5'; this.alt='Image loading failed - please check assets folder'">
-                <h3>Brand Identity</h3>
-                <p>Visual concepts and creative direction.</p>
+    <main>
+        <!-- Featured Work (dynamic from projects.json) -->
+        <section id="featured" class="section">
+            <h2 class="section-title">Featured Work</h2>
+            <div id="projects-container" class="featured-grid">
+                <div class="loading">Loading projects...</div>
             </div>
-            <!-- Removed stray closing div that broke structure -->
-        </div>
-    </section>
+            <div class="archive-link">
+                <p>Looking for more? <a href="https://github.com/morddy-tech?tab=repositories" target="_blank" rel="noopener noreferrer">Explore the Full Archive →</a></p>
+            </div>
+        </section>
 
-    <section id="dev" class="section">
-        <h2>Full Stack Development</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Java Project (T3/T4)</h3>
-                <p>Software engineering logic and application development.</p>
-                <!-- Added rel="noopener noreferrer" for security when opening external links -->
-                <a href="https://github.com/morddy-tech/your-repo" class="btn" target="_blank" rel="noopener noreferrer">View Code</a>
+        <!-- Professional Pillars (unchanged) -->
+        <section id="skills" class="section dark">
+            <h2 class="section-title">Professional Pillars</h2>
+            <div class="skills-container">
+                <div class="skill-pillar">
+                    <h3>🛡️ Cybersecurity</h3>
+                    <p>Threat intelligence, network defense (IBM/TS Academy), and SIEM configuration.</p>
+                </div>
+                <div class="skill-pillar">
+                    <h3>💻 Web Development</h3>
+                    <p>Building responsive front-ends and secure back-ends using HTML, CSS, and JS.</p>
+                </div>
+                <div class="skill-pillar">
+                    <h3>🎨 Graphic Design</h3>
+                    <p>Creative direction, branding, and user-centered design for digital platforms.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Python Automation (T2)</h3>
-                <p>Scripts developed for academic and practical automation.</p>
-                <!-- Placeholder link - consider adding real URL or removing href="#" -->
-                <a href="#" class="btn" rel="noopener noreferrer">View Project</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="security" class="section dark">
-        <h2>Cybersecurity Labs</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>SIEM Deployment</h3>
-                <p>Configuring Wazuh agents and monitoring network vulnerabilities.</p>
+        <!-- Updated Education & Professional Timeline -->
+        <section id="degree" class="section">
+            <h2 class="section-title">Education & Professional Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2025 — Present</div>
+                    <div class="timeline-content">
+                        <h3>B.Sc. in Computer Science</h3>
+                        <p class="institution">University of the People</p>
+                        <p>Focusing on software engineering, algorithms, and data structures.<br>
+                        <strong>Expected Graduation: 2027</strong></p>
+                        <div class="progress-bar"><div class="progress" style="width: 35%;"></div></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 — 2026</div>
+                    <div class="timeline-content">
+                        <h3>Professional Certificate – Full-Stack Development</h3>
+                        <p class="institution">IBM SkillsBuild | TS Academy</p>
+                        <p>Comprehensive training in frontend/backend integration and cybersecurity best practices.</p>
+                        <div class="progress-bar"><div class="progress" style="width: 35%;"></div></div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3>IBM Skill Build</h3>
-                <p>Certified training in threat intelligence and network defense.</p>
+        </section>
+
+        <!-- New Hardware & Specialized Skills Section -->
+        <section id="hardware" class="section dark">
+            <h2 class="section-title">Hardware & Specialized Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">Graphic Design</div>
+                <div class="skill-tag">Phone Repair</div>
+                <div class="skill-tag">Laptop Diagnostics</div>
+                <div class="skill-tag">Hardware Troubleshooting</div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 morddy-tech | Built with Secure HTML &amp; CSS</p>
+        <p>&copy; 2026 morddy-tech | <a href="LICENSE">MIT License</a></p>
     </footer>
 
-    <!-- Optional: Add a simple console warning to deter inspect-element tampering (cosmetic only) -->
-    <script>
-        // This is a deterrent, not a real security measure
-        if (window.console && window.console.log) {
-            console.log("%c🔒 Security Notice: This portfolio is protected with modern security headers.", "color: #00ff00; font-size: 14px;");
-            console.log("%c⚠️ Unauthorized code injection attempts will be blocked by CSP.", "color: #ffaa00; font-size: 12px;");
-        }
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>

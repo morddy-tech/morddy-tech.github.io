@@ -1,214 +1,332 @@
-/* ============================================
-   Morddy Portfolio - Security Hardened CSS
-   ============================================ */
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --accent-blue: #38bdf8;
+    --text-main: #f1f5f9;
+    --text-dim: #94a3b8;
+}
 
-/* Security Note: All external resources use HTTPS.
-   No CSS expressions, behaviors, or unsafe url() calls.
-   CSP will block any inline style injections. */
-
-/* CSS Reset & Base Security Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
     line-height: 1.6;
-    color: #333;
-    /* Security: Prevent CSS-based clickjacking attempts */
-    overflow-x: hidden;
 }
 
-/* Header & Navigation */
+/* Header & Hero */
 header {
-    background: #1a1a1a;
-    color: #fff;
-    padding: 2rem 0;
+    background: linear-gradient(to bottom, #000000, var(--bg-color));
+    padding: 2rem 0 5rem 0;
     text-align: center;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 1rem 10%;
     flex-wrap: wrap;
-    padding-bottom: 2rem;
     gap: 1rem;
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
 }
 
-nav ul {
+.nav-links {
     list-style: none;
-    padding: 0;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-nav a {
-    color: #fff;
+.nav-links a {
     text-decoration: none;
+    color: var(--text-dim);
+    transition: 0.3s;
     font-weight: 500;
-    transition: color 0.2s ease;
-    /* Security: No “visited” tracking leakage through CSS */
 }
 
-nav a:hover,
-nav a:focus {
-    color: #00aaff;
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--accent-blue);
     outline: none;
-    /* Accessibility: visual focus indicator */
     text-decoration: underline;
 }
 
-/* Hero Section */
-.hero {
-    padding: 2rem 1rem;
-}
-
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Section Grid System */
+.tagline {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    margin-top: 0.5rem;
+}
+
+.badges {
+    margin-top: 1rem;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+/* Sections */
 .section {
-    padding: 4rem 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
+    padding: 5rem 10%;
 }
 
-.section h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    position: relative;
+.section.dark {
+    background: rgba(0, 0, 0, 0.2);
 }
 
-.grid {
+.section-title {
+    font-size: 2rem;
+    border-left: 4px solid var(--accent-blue);
+    padding-left: 1rem;
+    margin-bottom: 3rem;
+}
+
+/* Featured Grid (dynamic projects) */
+.featured-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
-/* Cards - with secure transition (no 3D transforms that could be abused) */
-.card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    background: #fff;
-}
-
-.card:hover,
-.card:focus-within {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Image security: prevent oversized external images */
-.card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    display: block;
-    margin-bottom: 1rem;
-    /* Security: no pointer-events: none abuse */
-}
-
-/* Dark section styling (originally .dark) */
-.dark {
-    background: #f4f4f4;
-    border-radius: 15px;
+/* Project Card (dynamic) */
+.project-card {
+    background: var(--card-bg);
     padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s;
 }
 
-/* Button styling - with secure focus states */
-.btn {
+.project-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.category {
+    font-size: 0.8rem;
+    color: var(--accent-blue);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tech-stack {
+    margin: 1rem 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+}
+
+.btn-outline {
     display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background: #092038;
-    color: #fff;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
     text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.2s ease;
-    border: none;
-    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
     font-weight: 500;
 }
 
-.btn:hover,
-.btn:focus {
-    background: #220116;
-    outline: 2px solid #20011a;
-    outline-offset: 2px;
+.btn-outline:hover,
+.btn-outline:focus {
+    background: var(--accent-blue);
+    color: var(--bg-color);
+    outline: none;
+}
+
+/* Professional Pillars */
+.skills-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.skill-pillar {
+    flex: 1;
+    min-width: 250px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.skill-pillar:hover {
+    background: rgba(56, 189, 248, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Timeline & Progress Bar */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.timeline-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-blue);
+}
+
+.timeline-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    color: var(--accent-blue);
+    min-width: 150px;
+}
+
+.timeline-content h3 {
+    margin-bottom: 0.5rem;
+}
+
+.institution {
+    font-style: italic;
+    color: var(--text-dim);
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    background: #334155;
+    border-radius: 20px;
+    height: 8px;
+    width: 100%;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.progress {
+    background: var(--accent-blue);
+    height: 100%;
+    width: 0%;
+    border-radius: 20px;
+    transition: width 1s ease;
+}
+
+/* Hardware & Specialized Skills Grid */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background: rgba(56, 189, 248, 0.15);
+    border: 1px solid var(--accent-blue);
+    color: var(--text-main);
+    padding: 0.6rem 1.2rem;
+    border-radius: 40px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.skill-tag:hover {
+    background: var(--accent-blue);
+    color: var(--bg-color);
+    transform: translateY(-3px);
+    cursor: default;
+}
+
+/* Archive link */
+.archive-link {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--text-dim);
+}
+
+.archive-link a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.archive-link a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 2rem;
-    background: #1a1a1a;
-    color: #fff;
-    margin-top: 2rem;
+    border-top: 1px solid #1e293b;
+    color: var(--text-dim);
 }
 
-/* Accessibility & Security Utilities */
-/* Prevent unwanted text selection on interactive elements (by user choice, not forced) */
-.btn, nav a, .card {
-    user-select: auto; /* allow selection for accessibility */
+footer a {
+    color: var(--accent-blue);
+    text-decoration: none;
 }
 
-/* No external fonts loaded by default - if you add custom fonts, enforce HTTPS */
-/* Example of safe @font-face (commented for security):
-   @font-face {
-       font-family: 'SafeFont';
-       src: url('https://fonts.example.com/safe.woff2') format('woff2');
-       font-display: swap;
-   }
-*/
+/* Loading / error */
+.loading, .error {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-dim);
+}
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
         text-align: center;
     }
-    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
     }
-    
     .section {
-        padding: 2rem 1rem;
+        padding: 3rem 5%;
     }
-    
-    .grid {
-        grid-template-columns: 1fr;
+    .timeline-item {
+        flex-direction: column;
+        gap: 0.5rem;
     }
-    
-    .dark {
-        padding: 1rem;
-    }
-}
-
-/* Print styles (optional security: hide unnecessary elements) */
-@media print {
-    .btn {
-        display: none;
-    }
-    body {
-        color: #000;
-        background: #fff;
+    .timeline-date {
+        min-width: auto;
     }
 }
