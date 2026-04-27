@@ -4,7 +4,7 @@
         "category": "T3 | Java Engineering",
         "description": "A robust Java application featuring encrypted transaction logs and input validation protocols.",
         "techStack": "Java • OOP • Security",
-        "link": "https://github.com/morddy-tech/projects/T3-Java/CourseMgtSys",
+        "link": "https://github.com/morddy-tech/morddy-tech.github.io/tree/main/projects/T3-Java/CourseMgtSys",
         "linkText": "View Repository",
         "image": "assets/img/pic.jpg"
     },
@@ -13,7 +13,7 @@
         "category": "Cybersecurity",
         "description": "End-to-end monitoring setup for vulnerability detection and real-time threat intelligence.",
         "techStack": "Linux • Wazuh • SIEM",
-        "link": "https://github.com/morddy-tech/projects/Cybers",
+        "link": "https://github.com/morddy-tech/morddy-tech.github.io/tree/main/projects/Cybers",
         "linkText": "Read Case Study",
         "image": "assets/img/pic.jpg"
     },
@@ -22,7 +22,7 @@
         "category": "Graphic Design",
         "description": "A collection of branding, typography, and UI mockups designed for modern tech brands.",
         "techStack": "Photoshop • Illustrator • UI/UX",
-        "link": "https://behance.net/morddy",
+        "link": "https://github.com/morddy-tech/morddy-tech.github.io/tree/main/assets/img",
         "linkText": "Open Gallery",
         "image": "assets/img/pic.jpg"
     },
@@ -31,7 +31,7 @@
         "category": "T2 | Python Automation",
         "description": "Python-based automation script for processing large datasets with error-handling logic.",
         "techStack": "Python • Data Logic • Automation",
-        "link": "https://github.com/morddy-tech/projects/T4-Java",
+        "link": "https://github.com/morddy-tech/morddy-tech.github.io/tree/main/projects/T2-Python/Basic%20Calculator",
         "linkText": "Explore Code",
         "image": "assets/img/pic.jpg"
     },
@@ -40,7 +40,7 @@
         "category": "T2 | Python Automation",
         "description": "Python-based automation script for processing large datasets with error-handling logic.",
         "techStack": "Python • Data Logic • Automation",
-        "link": "https://github.com/morddy-tech/projects/T4-Java",
+        "link": "#",
         "linkText": "Explore Code",
         "image": "assets/img/pic.jpg"
     },
@@ -49,7 +49,7 @@
         "category": "T2 | Python Automation",
         "description": "Python-based automation script for processing large datasets with error-handling logic.",
         "techStack": "Python • Data Logic • Automation",
-        "link": "https://github.com/morddy-tech/projects/T4-Java",
+        "link": "#",
         "linkText": "Explore Code",
         "image": "assets/img/pic.jpg"
     }
