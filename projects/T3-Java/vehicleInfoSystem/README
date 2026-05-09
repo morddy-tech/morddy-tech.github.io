@@ -1,0 +1,98 @@
+# 🚗 Vehicle Information System
+
+A console‑based Java application that manages different vehicle types (cars, motorcycles, trucks) for a car rental agency. Demonstrates **interfaces**, **encapsulation**, **input validation**, and **enums**.
+
+## ✨ Features
+
+- **Car** – store make, model, year, number of doors, fuel type (Petrol/Diesel/Electric)
+- **Motorcycle** – store wheels (2 or 3) and type (Sport/Cruiser/Off‑road)
+- **Truck** – store cargo capacity (tons) and transmission (Manual/Automatic)
+- **Input validation** – year between 1886 and next year, doors 2‑6, wheels 2‑3, capacity 0‑100 tons
+- **Enums** for fuel type, motorcycle type, transmission – no invalid strings
+- **User‑friendly prompts** – re‑prompts on invalid input instead of crashing
+
+## 🛠️ Requirements
+
+- Java JDK 11 or higher
+
+## 📁 Project Structure
+vehicle-info-system/
+├── com/
+│ └── vehicleInfoSystem/
+│ ├── models/
+│ │ ├── Vehicle.java
+│ │ ├── CarVehicle.java
+│ │ ├── MotorVehicle.java
+│ │ ├── TruckVehicle.java
+│ │ ├── Car.java
+│ │ ├── Motorcycle.java
+│ │ ├── Truck.java
+│ │ └── enums/
+│ │ ├── FuelType.java
+│ │ ├── MotorcycleType.java
+│ │ └── TransmissionType.java
+│ └── VehicleInformationSystem.java
+└── README.md
+
+text
+
+## 🚀 How to Compile & Run
+
+From the parent directory that contains the `com/` folder:
+
+```bash
+# Compile all Java files
+javac com/vehicleInfoSystem/models/*.java \
+      com/vehicleInfoSystem/models/enums/*.java \
+      com/vehicleInfoSystem/VehicleInformationSystem.java
+
+# Run the main class
+java com.vehicleInfoSystem.VehicleInformationSystem
+Alternative (if you are inside vehicle-info-system/ folder):
+
+bash
+javac com/vehicleInfoSystem/**/*.java com/vehicleInfoSystem/VehicleInformationSystem.java
+java com.vehicleInfoSystem.VehicleInformationSystem
+📝 Sample Interaction
+text
+=== Vehicle Information System ===
+
+--- Car Details ---
+Make: Toyota
+Model: Camry
+Year: 2020
+Number of Doors (2-6): 4
+Fuel Type (Petrol/Diesel/Electric): Petrol
+
+--- Motorcycle Details ---
+Make: Yamaha
+Model: R1
+Year: 2021
+Number of Wheels (2 or 3): 2
+Motorcycle Type (Sport/Cruiser/Off-road): Sport
+
+--- Truck Details ---
+Make: Volvo
+Model: FH16
+Year: 2019
+Cargo Capacity (tons, 0-100): 25.5
+Transmission Type (Manual/Automatic): Manual
+
+=== Vehicle Details ===
+Car:        Toyota Camry (2020) | Doors: 4 | Fuel: PETROL
+Motorcycle: Yamaha R1 (2021) | Wheels: 2 | Type: SPORT
+Truck:      Volvo FH16 (2019) | Capacity: 25.5 tons | Transmission: MANUAL
+🔒 Security & Robustness
+No direct SQL or shell commands – safe for local use.
+
+All inputs are trimmed, validated, and re‑prompted on error.
+
+Enums prevent arbitrary string injection.
+
+try‑with‑resources ensures Scanner is closed properly.
+
+🧪 Extending the System
+You can easily add new vehicle types (e.g., ElectricScooter) by implementing the Vehicle interface and any custom interface. Add new enums for vehicle‑specific attributes.
+
+📄 License
+Educational use – free to modify.

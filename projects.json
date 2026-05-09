@@ -4,7 +4,7 @@
         "category": "T2 | Desktop Application / Productivity Tool",
         "description": "A fully-featured scientific calculator built with Python and Tkinter. Supports basic arithmetic, trigonometric functions (sin, cos, tan), logarithms (log₁₀, ln, log₂), exponents (xʸ, eˣ, 10ˣ), roots (√x, ∛x), factorial, reciprocal, percentage, memory operations (M+, M-, MR, MC), constants (π, e), answer recall (ANS), and a persistent history panel. The UI is keyboard-friendly and all operations are implemented without eval() for maximum security and input validation.",
         "techStack": "Python 3, Tkinter, Math Library, Object-Oriented Design",
-        "link": "https://github.com/morddy-tech/projects/T2-Python/calculator-project/AdvancedCalcGUI.py",
+        "link": "https://github.com/morddy-tech/morddy-tech.github.io/blob/main/projects/T2-Python/calculator-project/AdvancedCalcGUI.py",
         "linkText": "View Source Code",
         "image": "/assets/img/adv_calc.png"
     },
@@ -13,7 +13,7 @@
         "category": "T3 | Java Engineering",
         "description": "A comprehensive Java-based desktop application featuring a Swing-designed GUI for academic administration. Implements secure data handing, object-oriented desing patterns, and robust input validation to prevent data corruption.",
         "techStack": "Java • Java Swing • AWT • I/O",
-        "link": "https://github.com/morddy-tech/projects/T3-Java/studentManagementSystemGUI",
+        "link": "https://github.com/morddy-tech/morddy-tech.github.io/blob/main/projects/T3-Java/studentManagementSystemGUI/src/studentManagementSystemGUI/StudentManagementSystemGUI.java",
         "linkText": "View Repository",
         "image": "assets/img/gui.png"
     },
@@ -22,34 +22,34 @@
         "category": "Backend / Console Application",
         "description": "A modular vehicle management system for a car rental agency. Implements OOP principles (interfaces, inheritance, encapsulation) with type‑safe enums and robust input validation. Users can enter and display details for cars, motorcycles, and trucks. Features professional error handling, range checks, and reusable input utilities.",
         "techStack": "Java 17+, OOP, Enums, Scanner, Try‑with‑Resources, Custom Validation",
-        "link": "https://github.com/morddy-tech/projects/T3-Java/vehicleInfoSystem",
+        "link": "https://github.com/morddy-tech/morddy-tech.github.io/blob/main/projects/T3-Java/vehicleInfoSystem/src/com/vehicleInfoSystem/VehicleInformationSystem.java",
         "linkText": "View Source Code",
         "image": "assets/img/vehInfo.png"
     },
     {
+        "title": "Loading...",
+        "category": "",
+        "description": "",
+        "techStack": "",
+        "link": "#",
+        "linkText": "Wait..",
+        "image": "assets/img/pic.jpg"
+    },
+    {
+        "title": "Loading...",
+        "category": "",
+        "description": "",
+        "techStack": "",
+        "link": "#",
+        "linkText": "Wait..",
+        "image": "assets/img/pic.jpg"
+    },
+    {
         "title": "Visual Identity Portfolio",
         "category": "Graphic Design",
         "description": "A collection of branding, typography, and UI mockups designed for modern tech brands.",
         "techStack": "Photoshop • Illustrator • UI/UX",
-        "link": "https://behance.net/morddy",
-        "linkText": "Open Gallery",
-        "image": "assets/img/pic.jpg"
-    },
-    {
-        "title": "Wazuh SIEM Deployment",
-        "category": "Cybersecurity",
-        "description": "End-to-end monitoring setup for vulnerability detection and real-time threat intelligence.",
-        "techStack": "Linux • Wazuh • SIEM",
-        "link": "https://github.com/morddy-tech/morddy-tech.github.io/tree/main/projects/Cybers",
-        "linkText": "Read Case Study",
-        "image": "assets/img/pic.jpg"
-    },
-    {
-        "title": "Visual Identity Portfolio",
-        "category": "Graphic Design",
-        "description": "A collection of branding, typography, and UI mockups designed for modern tech brands.",
-        "techStack": "Photoshop • Illustrator • UI/UX",
-        "link": "https://github.com/morddy-tech/morddy-tech.github.io/tree/main/assets/img",
+        "link": "https://www.behance.net/lukegrace2",
         "linkText": "Open Gallery",
         "image": "assets/img/pic.jpg"
     }
