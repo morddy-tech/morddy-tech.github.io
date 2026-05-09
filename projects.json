@@ -45,12 +45,12 @@
         "image": "assets/img/pic.jpg"
     },
     {
-        "title": "Visual Identity Portfolio",
+        "title": "Brand Identity & Visual Graphics",
         "category": "Graphic Design",
-        "description": "A collection of branding, typography, and UI mockups designed for modern tech brands.",
-        "techStack": "Photoshop • Illustrator • UI/UX",
+        "description": "A curated collection of my graphic design projects, including logo design, print materials, social media visuals, and UI concepts. Each piece focuses on clean composition, typography, and brand storytelling.",
+        "techStack": "CorelDRAW • Adobe Photoshop • Illustrator • UI/UX",
         "link": "https://www.behance.net/lukegrace2",
-        "linkText": "Open Gallery",
-        "image": "assets/img/pic.jpg"
+        "linkText": "View Full Gallery on Behance",
+        "image": "assets/img/gallery.png"
     }
 ]
