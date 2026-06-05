@@ -27,13 +27,13 @@
         "image": "assets/img/vehInfo.png"
     },
     {
-       "title": "Client Web Projects",
-       "category": "Web Development & Design",
-       "description": "A curated collection of live websites and applications built for clients, featuring custom solutions designed to meet specific business needs.",
-       "techStack": "HTML5, CSS3, JavaScript, React, Node.js",
-       "link": "https:",
-       "linkText": "View All Live Sites",
-       "image": "assets/img/client_showcase.png"
+        "title": "Client Web Projects",
+        "category": "Web Development & Design",
+        "description": "A curated collection of live websites and applications built for clients, featuring custom solutions designed to meet specific business needs.",
+        "techStack": "HTML5, CSS3, JavaScript, React, Node.js",
+        "link": "https:",
+        "linkText": "View All Live Sites",
+        "image": "assets/img/client_showcase.png"
     },
     {
         "title": "Loading...",
