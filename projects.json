@@ -46,15 +46,15 @@
         "linkText": "View All Live Sites",
         "image": "assets/img/client_showcase.png"
     },
-    /*{
-        "title": "Loading...",
-        "category": "",
-        "description": "",
-        "techStack": "",
-        "link": "#",
-        "linkText": "Wait..",
-        "image": "assets/img/pic.jpg"
-    },*/
+    //{
+        //"title": "Loading...",
+        //"category": "",
+        //"description": "",
+        //"techStack": "",
+        //"link": "#",
+        //"linkText": "Wait..",
+        //"image": "assets/img/pic.jpg"
+    //},
     {
         "title": "Brand Identity & Visual Graphics",
         "category": "Graphic Design",
