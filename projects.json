@@ -33,9 +33,9 @@
         "techStack": "Next.js, React, TypeScript, Tailwind CSS, Google Gemini API, PDF.js, Framer Motion, shadcn/ui, Vercel",
         "link": "https://study-mate-ai-psi.vercel.app/",
         "linkText": "Live Demo",
-        "github": "https://github.com/morddy-tech/StudyMateAI",
+        //"github": "https://github.com/morddy-tech/StudyMateAI",
         "image": "assets/img/studymate-ai.png",
-        "featured": true
+        //"featured": true
     }
     {
         "title": "Client Web Projects",
@@ -46,7 +46,7 @@
         "linkText": "View All Live Sites",
         "image": "assets/img/client_showcase.png"
     },
-    {
+    /*{
         "title": "Loading...",
         "category": "",
         "description": "",
@@ -54,7 +54,7 @@
         "link": "#",
         "linkText": "Wait..",
         "image": "assets/img/pic.jpg"
-    },
+    },*/
     {
         "title": "Brand Identity & Visual Graphics",
         "category": "Graphic Design",
