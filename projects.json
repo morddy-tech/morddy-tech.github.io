@@ -27,6 +27,17 @@
         "image": "assets/img/vehInfo.png"
     },
     {
+        "title": "StudyMate AI",
+        "category": "AI-Powered Education Platform",
+        "description": "StudyMate AI is an intelligent learning assistant that transforms textbooks, lecture notes, research papers, and meeting transcripts into concise summaries, simplified explanations, interactive flashcards, quizzes, and structured study guides. Built with Next.js and AI, it helps students and professionals learn faster and retain information more effectively.",
+        "techStack": "Next.js, React, TypeScript, Tailwind CSS, Google Gemini API, PDF.js, Framer Motion, shadcn/ui, Vercel",
+        "link": "https://study-mate-ai-psi.vercel.app/",
+        "linkText": "Live Demo",
+        "github": "https://github.com/morddy-tech/StudyMateAI",
+        "image": "assets/img/studymate-ai.png",
+        "featured": true
+    }
+    {
         "title": "Client Web Projects",
         "category": "Web Development & Design",
         "description": "A curated collection of live websites and applications built for clients, featuring custom solutions designed to meet specific business needs.",
