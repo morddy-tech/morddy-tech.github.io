@@ -1,0 +1,129 @@
+# 🎓 Advanced Student Management System (GUI)
+
+A fully‑featured **Swing‑based desktop application** for managing students, courses, enrollments, grades, attendance, and generating reports. Data is persisted locally using Java serialization.
+
+## ✨ Features
+
+### 🧑 Student Management
+- Add, update, delete students (ID, name, age)
+- Search students by any field
+- Real‑time table filtering
+
+### 📚 Course Management
+- Add/delete courses (code, name, credits – 1–6)
+- Prevent deletion of courses with existing enrollments (with warning)
+
+### 📋 Enrollment
+- Enroll students in courses
+- Withdraw students from courses
+- Auto‑updates related grades and attendance
+
+### 🎯 Grading
+- Assign letter grades (A, B, C, D, F) or numeric (0‑100)
+- Automatic GPA calculation (weighted by credits)
+- Grade table with GPA value column
+
+### 📅 Attendance
+- Mark attendance percentage (0–100%) per student per course
+- Slider + text field for easy input
+
+### 📊 Reports
+- **Student report** – courses enrolled, average GPA
+- **Course report** – enrollment count, average grade
+- **GPA report** – ranked list with academic standing (Dean's List, Probation, etc.)
+- **Export all reports to CSV** (saved in `data/` folder)
+
+### 💾 Data Persistence
+- Automatic save on exit
+- Data stored in `data/` folder as `.dat` files (Java serialization)
+- Loads previous state on startup
+
+### 🎨 User Interface
+- Tabbed layout (6 tabs)
+- System Look & Feel
+- Responsive tables with sorting
+- Input validation and error dialogs
+
+## 🛠️ Requirements
+
+- **Java JDK 11 or higher** (Swing is included)
+
+## 📁 Project Structure
+student-management-gui/
+├── src/
+│ └── studentManagementSystemGUI/
+│ └── StudentManagementSystemGUI.java (single file – all classes inside)
+├── data/ (created automatically)
+│ ├── students.dat
+│ ├── courses.dat
+│ ├── enrollments.dat
+│ ├── grades.dat
+│ └── attendance.dat
+└── README.md
+
+text
+
+**Note:** The code uses package `studentManagementSystemGUI`. Compile and run as shown below.
+
+## 🚀 How to Compile & Run
+
+### From the command line (inside `student-management-gui/` folder):
+
+```bash
+# Compile
+javac src/studentManagementSystemGUI/StudentManagementSystemGUI.java
+
+# Run
+java -cp src studentManagementSystemGUI.StudentManagementSystemGUI
+Alternative (if you prefer to run from the root of the project):
+bash
+javac src/studentManagementSystemGUI/*.java
+java -cp src studentManagementSystemGUI.StudentManagementSystemGUI
+Using an IDE (Eclipse, IntelliJ, NetBeans)
+Import the src folder as source root.
+
+Run StudentManagementSystemGUI.main(...).
+
+📝 Usage Walkthrough
+Students tab – Add students with unique ID. Select a row to update/delete.
+
+Courses tab – Add courses. Credits must be 1–6.
+
+Enrollment tab – Choose a student and a course, click Enroll. Withdraw by selecting a row.
+
+Grades tab – Select a student, then a course they are enrolled in, assign a grade.
+
+Attendance tab – Set attendance percentage (0–100) for a student in a specific course.
+
+Reports tab – Generate any report and export to CSV (saved in data/ folder).
+
+🔒 Security & Data Integrity
+No SQL injection – uses only in‑memory collections + serialisation.
+
+Input validation – age (0–150), credits (1–6), attendance (0–100), grade format.
+
+Duplicate prevention – student ID and course code must be unique.
+
+Referential integrity – deleting a student removes all enrollments, grades, attendance.
+
+Serialisation – data is stored in binary format (not human‑editable, but safe from casual tampering).
+
+⚠️ Known Limitations & Future Improvements
+Serialisation format – not portable across different Java versions if classes change. Consider JSON or SQLite for production.
+
+No authentication – single‑user only. Add login for multiple roles.
+
+No backup/restore – manually copy data/ folder.
+
+Attendance tracking – only a single percentage per student‑course (no per‑date records).
+
+Possible enhancements:
+
+Use JCalendar for date‑specific attendance.
+
+Add a grade point average (GPA) chart.
+
+Integrate with a database (H2, MySQL).
+
+📄 License
+Educational use – free to modify and share.
