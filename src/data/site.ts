@@ -5,7 +5,7 @@ export const site = {
   secondaryTitle: "Cybersecurity-Focused Engineer",
   positioning:
     "I build modern, scalable web applications with a security-first mindset — from intuitive interfaces and robust APIs to databases, authentication, cloud infrastructure, and security monitoring.",
-  email: "graxuluke@gmail.com",
+  email: "ifedmord5194@gmail.com",
   phone: "+234 901 370 3764",
   phoneHref: "tel:+2349013703764",
   github: "https://github.com/morddy-tech",
@@ -19,7 +19,7 @@ export const site = {
   url: "https://morddy-tech.github.io",
   socials: {
     github: "https://github.com/morddy-tech",
-    email: "mailto:graxuluke@gmail.com",
+    email: "mailto:ifedmord5194@gmail.com",
     linkedin: "https://www.linkedin.com/in/ifedayo-matthew",
   },
 } as const;
